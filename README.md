@@ -51,6 +51,21 @@ The turtle will move linearly across the simulation window:
 
 > **Note:** Keep the simulation terminal active while the node is running.
 
+
+### Circle Node Demonstration
+
+As in the previous steps, first ensure the simulation environment is running.  
+
+Make sure you have the [Circle Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/circle_node.py) code ready.  
+
+Once both the simulation and node are set up, you can run the [Circle command](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Circle%20Runner) in a second terminal.  
+
+The turtle will move in a complete circle. The expected outcome is shown below:  
+
+![Circle Node Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_ClassCircle.png)
+
+
+
 ## Figure '8' Node Demonstration
 
 Ensure the [`Figure '8' Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/figure_eight_node.py) file is present.
