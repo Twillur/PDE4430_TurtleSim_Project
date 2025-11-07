@@ -104,7 +104,6 @@ Execute the [4 Roombas](https://github.com/Twillur/PDE4430_TurtleSim_Project/blo
 
 Four turtles will navigate the environment simultaneously, each following independent cleaning paths:
 
-![4 Roombas Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_4Roombas.png)
-
+![4 Roombas Demonstration](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/TurtleSim%20Simulation%20Visual/Turtlesim_4Roombas.png)
 > **Note:** Ensure the simulation terminal remains active to observe all turtles.
 
