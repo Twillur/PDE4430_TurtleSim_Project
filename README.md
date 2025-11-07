@@ -29,26 +29,85 @@ The message type is **`turtlesim/msg/Color`**, with an example output being: **r
 
 This ROS 2 package contains all nodes required for **Tasks 2 and 3** and is properly configured, with all node entry points defined in the [`Setup`](setup.py), allowing each node to be executed directly using `ros2 run`. The [`Setup`](setup.py) file specifies the package metadata and registers all executable nodes, so it is important to ensure that this file is correctly set up and the package is built before running the simulator or launching any nodes.
 
-# Task 2: Straight Line Node Demonstration
+# Task 2
 
-This section demonstrates the execution and expected behavior of the **Straight Line Node** in the TurtleSim environment. Ensure that the node file is available and contains the complete implementation: [Straight Line Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py).
+## Straight Line Node Demonstration
 
-## Simulation Setup
+Ensure the [`Straight Line Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py) file is present with all its program contents.
 
-Before running the node, prepare two terminals:
+### Simulation Setup
 
-1. **Simulation Runner:** In the first terminal, launch and maintain the TurtleSim simulation environment using the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner). This terminal must remain active throughout the node execution.
+Open two terminals. In the first terminal, start and maintain the simulation environment using the [`Simulation Runner`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner).
 
-2. **Node Execution Terminal:** The second terminal will be used to run the Straight Line Node.
+### Running the Straight Line Node
 
-## Running the Straight Line Node
+With the simulation running, execute the [`Straight Line`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Straight%20Line%20Runner) node in the second terminal.
 
-With the simulation running, execute the [Straight Line Node Runner](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Straight%20Line%20Runner) in the second terminal. This node controls the turtle to move linearly across the simulation window.
+### Expected Output
 
-## Expected Output
-
-Upon successful execution, the turtle will traverse the simulation window in a straight line. The expected behavior is illustrated below:
+The turtle will move linearly across the simulation window:
 
 ![Straight Line Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_StraightLine.png)
 
-> **Note:** Ensure that the simulation terminal remains active while the Straight Line Node is running to maintain the simulation environment.
+> **Note:** Keep the simulation terminal active while the node is running.
+
+## Figure '8' Node Demonstration
+
+Ensure the [`Figure '8' Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/figure_eight_node.py) file is present.
+
+### Simulation Setup
+
+Use the same simulation terminal as before to maintain the environment.
+
+### Running the Figure '8' Node
+
+Start the [`Figure '8'`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%208%20Runner) node in a new terminal.
+
+### Expected Output
+
+The turtle will follow a figure-eight trajectory:
+
+![Figure 8 Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_Figure8.png)
+
+> **Note:** Ensure the simulation remains active while executing this node.
+
+## Roomba Node Demonstration
+
+Ensure the [`Roomba Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/roomba_node.py) file is available.
+
+### Simulation Setup
+
+Continue using the running simulation terminal.
+
+### Running the Roomba Node
+
+Execute the [`Roomba`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Roomba%20Runner) node in a separate terminal.
+
+### Expected Output
+
+The turtle will autonomously navigate the environment in a random cleaning pattern:
+
+![Roomba Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_Roomba.png)
+
+> **Note:** Keep the simulation terminal active to observe the full behavior.
+
+## 4 Roombas Node Demonstration
+
+Ensure the [`4 Roombas Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/four_roombas_node.py) file is available.
+
+### Simulation Setup
+
+Maintain the simulation running in the first terminal.
+
+### Running the 4 Roombas Node
+
+Execute the [`4 Roombas`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Four%20Roombas%20Runner) node in a new terminal.
+
+### Expected Output
+
+Four turtles will navigate the environment simultaneously, each following independent cleaning paths:
+
+![4 Roombas Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_4Roombas.png)
+
+> **Note:** Ensure the simulation terminal remains active to observe all turtles.
+
