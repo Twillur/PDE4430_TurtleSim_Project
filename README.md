@@ -33,3 +33,11 @@ The message type is **turtlesim/msg/Pose**. I used the command ros2 topic info /
 - Give an example of a message being published on /turtle1/color_sensor.
 
 The message is an turtlesim/msg/Color type, with an example output being: **r: 179, g: 184, b: 255**. I used the command ros2 topic echo /turtle1/color_sensor. This command shows the live data stream. I copied one message block, which contains the RGB values (Red, Green, Blue) of the background pixel currently under the turtle, confirming the message type is turtlesim/msg/Color.
+
+# Package Configuration and `setup.py` Structure
+
+This ROS 2 package contains all nodes required for **Tasks 2 and 3**. The package is properly configured, with all node entry points defined in [`setup.py`](setup.py), allowing each node to be executed directly using `ros2 run`.  
+
+### Package Configuration
+
+The [`setup.py`](setup.py) file specifies the package metadata and registers all executable nodes. Ensure that this file is correctly set up and the package is built before running the simulator or launching any nodes.
