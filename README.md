@@ -99,8 +99,7 @@ Maintain the simulation running in the first terminal.
 
 ### Running the 4 Roombas Node
 
-Execute the [`4 Roombas`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Four%20Roombas%20Runner) node in a new terminal.
-
+Execute the [4 Roombas](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/4RoombasRunner) commands in a new terminal.
 ### Expected Output
 
 Four turtles will navigate the environment simultaneously, each following independent cleaning paths:
