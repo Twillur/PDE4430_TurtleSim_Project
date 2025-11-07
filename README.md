@@ -113,7 +113,7 @@ Four turtles navigate independently, simulating multiple agents cleaning simulta
 
 ## Task 3: User Input for Turtle Control
 
-### User Inputting Linear and Angular Values
+### User Inputting Linear Speed and Angular Values
 
 #### Simulation Setup
 
