@@ -29,7 +29,7 @@ The message type is **`turtlesim/msg/Color`**, with an example output being: **r
 
 This ROS 2 package contains all nodes required for **Tasks 2 and 3** and is properly configured, with all node entry points defined in [`setup.py`](setup.py), allowing each node to be executed directly using `ros2 run`. The [`setup.py`](setup.py) file specifies the package metadata and registers all executable nodes, so it is important to ensure that this file is correctly set up and the package is built before running the simulator or launching any nodes.
 
-## Straight Line Node Demonstration
+## Task 2: Straight Line Node Demonstration
 
 This section demonstrates the **Straight Line** node, implemented in [`straight_line_node.py`](straight_line_node.py).
 
