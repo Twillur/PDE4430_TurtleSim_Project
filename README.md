@@ -67,7 +67,7 @@ Start the [`Figure '8'`]([https://github.com/Twillur/PDE4430_TurtleSim_Project/b
 
 The turtle will follow a figure-eight trajectory:
 
-![Figure 8 Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_Figure8.png)
+[Figure 8 Demonstration](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%20'8'%20Runner)
 
 > **Note:** Ensure the simulation remains active while executing this node.
 
