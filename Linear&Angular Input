@@ -1,0 +1,4 @@
+cd ~/workspace
+colcon build
+source install/setup.bash
+ros2 run turtlesim_pde4430 drive_user_input
