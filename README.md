@@ -31,15 +31,15 @@ This ROS 2 package contains all nodes required for **Tasks 2 and 3** and is prop
 
 ## Task 2: Straight Line Node Demonstration
 
-This section demonstrates the **Straight Line** node, implemented in the [Straight Line Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py)
+First of all make sure you have the Straight Line Node file ready with all its program contents within [Straight Line Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py)
 
 ### Simulation Setup
 
-Before running the node, ensure the TurtleSim simulation is active. Open a terminal and run the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner) to start and maintain the simulation environment.
+Before running the node, make sure you have two terminals open, for the first one run the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner) to start and maintain the simulation environment.
 
 ### Running the Straight Line Node
 
-With the simulation running, execute the **Straight Line** node to move the turtle in a straight trajectory. The node is implemented in [`straight_line_node.py`](straight_line_node.py).
+With the simulation running, then open the second temrinal and start the  [Straight Line]([straight_line_node.py](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Straight%20Line%20Runner)) node.
 
 ### Expected Output
 
