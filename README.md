@@ -86,8 +86,7 @@ Execute the [Roomba](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/m
 
 The turtle will autonomously navigate the environment in a random cleaning pattern:
 
-![Roomba Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_Roomba.png)
-
+![Roomba Demonstration](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Roomba.png)
 > **Note:** Keep the simulation terminal active to observe the full behavior.
 
 ## 4 Roombas Node Demonstration
