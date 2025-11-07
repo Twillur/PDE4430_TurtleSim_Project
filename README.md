@@ -45,6 +45,6 @@ With the simulation running, then open the second temrinal and start the  [Strai
 
 The turtle will move linearly across the simulation window. The expected result is shown below:
 
-![Straight Line Turtle Movement]([TurtleSim_StraightLine.png](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/TurtleSim%20Simulation%20Visual/TurtleSim_StraightLine.png))
+![Straight Line Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_StraightLine.png)
 
 > **Note:** Keep the simulation terminal active while the node is running.
