@@ -1,6 +1,4 @@
-# Assessment 1
-
-## TurtleSim Simulation
+# Assessment 1: TurtleSim Simulation
 
 **Student:** William Kojumian  
 **Professor:** Dr. Sameer Kishore  
@@ -8,167 +6,153 @@
 **Academic Year:** 2025-26  
 **Submission Date:** November 7, 2025  
 
-### Task 1
+---
 
-- **What is the name of the publisher node?**  
-The name of the publisher node is **/teleop_turtle**. This was determined using the command `ros2 node list` while both the simulator and controller were running. The controller node is responsible for _publishing_ movement instructions, and its internal name is **/teleop_turtle**.
+## Task 1: Publisher and Message Inspection
 
-- **What is the message type of `/cmd_vel`?**  
-The message type of the movement topic (`/turtle1/cmd_vel`) is **`geometry_msgs/msg/Twist`**. First, `ros2 topic list` was used to identify the specific topic for commands. Then, `ros2 topic info /turtle1/cmd_vel` was run to inspect the communication format required for sending linear and angular velocity instructions.
+- **Publisher Node Name:**  
+The primary publisher node is **`/teleop_turtle`**, determined via `ros2 node list` while both the simulator and controller nodes were active. This node is responsible for sending movement instructions to the turtle.
 
-- **What is the frequency of publication of the node publishing on `/cmd_vel`?**  
-The publication frequency is the default rate of **10 Hz**. This was verified using `ros2 topic hz /turtle1/cmd_vel` while the turtle was moving. Although the live measurement can fluctuate slightly, the control loop in `turtle_teleop_key` that publishes these commands is hardcoded to **10 Hz**.
+- **Message Type of `/cmd_vel`:**  
+The topic `/turtle1/cmd_vel` uses **`geometry_msgs/msg/Twist`**. The topic type was confirmed using `ros2 topic info /turtle1/cmd_vel` after identifying it with `ros2 topic list`. This message format allows the specification of both linear and angular velocities.
 
-- **What is the message type of `/turtle1/pose`?**  
-The message type is **`turtlesim/msg/Pose`**. This was confirmed using `ros2 topic info /turtle1/pose`. This topic is published by the simulator (`/turtlesim`) to report the turtle’s state, including its X and Y location and orientation, verifying the specific message structure within the `turtlesim` package.
+- **Publication Frequency of `/cmd_vel`:**  
+The default publishing frequency is **10 Hz**, verified with `ros2 topic hz /turtle1/cmd_vel`. Minor fluctuations may occur, but the control loop in `turtle_teleop_key` is configured for 10 Hz.
 
-- **Give an example of a message being published on `/turtle1/color_sensor`.**  
-The message type is **`turtlesim/msg/Color`**, with an example output being: **r: 179, g: 184, b: 255**. This was obtained using the command `ros2 topic echo /turtle1/color_sensor`, which shows the live data stream. Each message contains the RGB values (Red, Green, Blue) of the background pixel currently under the turtle, confirming the message structure.
+- **Message Type of `/turtle1/pose`:**  
+The `/turtle1/pose` topic uses **`turtlesim/msg/Pose`**, confirmed using `ros2 topic info /turtle1/pose`. This topic provides real-time feedback of the turtle’s X, Y position and orientation.
 
-# Package Configuration and `setup.py` Structure
+- **Example Message from `/turtle1/color_sensor`:**  
+The `/turtle1/color_sensor` topic is of type **`turtlesim/msg/Color`**, with sample output: **r: 179, g: 184, b: 255**. Messages are obtained using `ros2 topic echo /turtle1/color_sensor` and represent the RGB color of the pixel beneath the turtle.
 
-This ROS 2 package contains all nodes required for **Tasks 2 and 3** and is properly configured, with all node entry points defined in the [`Setup`](setup.py), allowing each node to be executed directly using `ros2 run`. The [`Setup`](setup.py) file specifies the package metadata and registers all executable nodes, so it is important to ensure that this file is correctly set up and the package is built before running the simulator or launching any nodes.
+---
 
-# Task 2
+## Package Configuration and `setup.py`
 
-## Straight Line Node Demonstration
+This ROS 2 package includes all nodes required for **Tasks 2 and 3**. The [`setup.py`](setup.py) file registers all executable nodes and ensures they can be run directly with `ros2 run`. Proper configuration of this file is essential before building the package and executing the simulator or nodes.
 
-Ensure the [`Straight Line Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py) file is present with all its program contents.
+---
 
-### Simulation Setup
+## Task 2: Turtle Movement Demonstrations
 
-Open two terminals. In the first terminal, start and maintain the simulation environment using the [`Simulation Runner`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner).
+### Straight Line Node Demonstration
 
-### Running the Straight Line Node
+Ensure the [`Straight Line Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py) file is present with its complete code.  
+
+#### Simulation Setup
+
+Open two terminals. In the first terminal, start the simulation using the [`Simulation Runner`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner) to maintain the environment.
+
+#### Running the Node
 
 With the simulation running, execute the [`Straight Line`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Straight%20Line%20Runner) node in the second terminal.
 
-### Expected Output
+#### Expected Output
 
-The turtle will move linearly across the simulation window:
+The turtle moves in a straight linear path:
 
 ![Straight Line Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_StraightLine.png)
 
-> **Note:** Keep the simulation terminal active while the node is running.
+> **Note:** Keep the simulation terminal active while executing the node.
 
+---
 
 ### Circle Node Demonstration
 
-As in the previous steps, first ensure the simulation environment is running.  
+Ensure the simulation is active and the [Circle Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/circle_node.py) code is ready.  
 
-Make sure you have the [Circle Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/circle_node.py) code ready.  
+Run the [Circle command](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Circle%20Runner) in a second terminal.  
 
-Once both the simulation and node are set up, you can run the [Circle command](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Circle%20Runner) in a second terminal.  
-
-The turtle will move in a complete circle. The expected outcome is shown below:  
+The turtle will follow a circular trajectory:
 
 ![Circle Node Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_ClassCircle.png)
 
+---
 
+### Figure '8' Node Demonstration
 
-## Figure '8' Node Demonstration
+Ensure the [`Figure '8' Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/figure_eight_node.py) is available.  
 
-Ensure the [`Figure '8' Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/figure_eight_node.py) file is present.
+Run the [`Figure '8'`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%20'8'%20Runner) node in a second terminal while the simulation remains active.
 
-### Simulation Setup
+The turtle follows a figure-eight trajectory:
 
-Use the same simulation terminal as before to maintain the environment.
+![Figure 8 Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_NumberEight.png)
 
-### Running the [Figure 8 Demonstration](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%20'8'%20Runner) in the second terminal
+> **Note:** Keep the simulation terminal running to observe the complete behavior.
 
-Start the [`Figure '8'`]([https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%208%20Runner](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%20'8'%20Runner)) node in a new terminal.
+---
 
-### Expected Output
+### Roomba Node Demonstration
 
-The turtle will follow a figure-eight trajectory:
+Ensure the [`Roomba Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/roomba_node.py) file is present.  
 
-[![Figure 8 Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_NumberEight.png)](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%20'8'%20Runner)
+Run the [Roomba](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Roomba%20Runner) node in a second terminal.  
 
-> **Note:** Ensure the simulation remains active while executing this node.
+The turtle will autonomously navigate in a random cleaning pattern:
 
-## Roomba Node Demonstration
+![Roomba Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Roomba.png)
 
-Ensure the [`Roomba Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/roomba_node.py) file is available.
+> **Note:** Maintain the simulation terminal active for full observation.
 
-### Simulation Setup
+---
 
-Continue using the running simulation terminal.
+### 4 Roombas Node Demonstration
 
-### Running the Roomba Node
+Ensure the [4 Roombas Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/multi_turtle_node.py) is available.  
 
-Execute the [Roomba](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Roomba%20Runner) node in a separate terminal.
-### Expected Output
+Run the [4 Roombas](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/4RoombasRunner) node in a new terminal.  
 
-The turtle will autonomously navigate the environment in a random cleaning pattern:
+Four turtles navigate independently, simulating multiple agents cleaning simultaneously:
 
-![Roomba Demonstration](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Roomba.png)
-> **Note:** Keep the simulation terminal active to observe the full behavior.
+![4 Roombas Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_4Roombas.png)
 
-## 4 Roombas Node Demonstration
+> **Note:** Keep the simulation terminal active to observe all turtles.
 
-Ensure the [4 Roombas Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/multi_turtle_node.py) file is available.
+---
 
-### Simulation Setup
+## Task 3: User Input for Turtle Control
 
-Maintain the simulation running in the first terminal.
+### User Inputting Linear and Angular Values
 
-### Running the 4 Roombas Node
+#### Simulation Setup
 
-Execute the [4 Roombas](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/4RoombasRunner) commands in a new terminal.
-### Expected Output
+Ensure the simulation is running using the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner) in the first terminal.
 
-Four turtles will navigate the environment simultaneously, each following independent cleaning paths:
+#### Running the Drive User Input Node
 
-![4 Roombas Demonstration](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/TurtleSim%20Simulation%20Visual/Turtlesim_4Roombas.png)
-> **Note:** Ensure the simulation terminal remains active to observe all turtles.
+Open a second terminal and execute the [Drive User Input Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/drive_user_input.py).  
 
+After launching, input the **linear speed**, press Enter, then input the **angular velocity** and press Enter. The turtle will move according to these values.
 
-# Task 3: User Input for Linear and Angular Values
+Use the [Drive User Input Runner](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Linear%26Angular%20Input) to initiate the node.
 
-## User Inputting Linear and Angular Values
+#### Example Outputs
 
-### Simulation Setup
-
-As in previous tasks, first ensure that the simulation environment is running. Open the first terminal and start the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner).
-
-### Running the Drive User Input Node
-
-Once the simulation is running, open a second terminal and run the [Drive User Input Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/drive_user_input.py). This node allows the user to control the turtle’s motion by specifying linear and angular velocity values.
-
-After running the node, you will be prompted to input a **linear speed**. Enter a value and press Enter. Next, you will be prompted to input an **angular velocity**. Enter the value and press Enter. The turtle will then move in the simulation according to the provided inputs.
-
-To start the node execution, click or navigate to the [Drive User Input](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Linear%26Angular%20Input) link.
-
-### Example Outputs
-
-#### Linear = 1, Angular = 1
-
-Expected behavior for `linear = 1` and `angular = 1`:
+- **Linear = 1, Angular = 1**
 
 ![TurtleSim 1 Linear 1 Angular](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Linear1Angular.png)
 
-#### Linear = 1, Angular = 0
-
-Expected behavior for `linear = 1` and `angular = 0`:
+- **Linear = 1, Angular = 0**
 
 ![TurtleSim 1 Linear 0 Angular](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Linear0Angular.png)
 
-## User Inputting X and Y Coordinates
+---
 
-### Simulation Setup
+### User Inputting X and Y Coordinates
 
-As in previous tasks, first ensure that the simulation environment is running. Open the first terminal and start the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner).
+#### Simulation Setup
 
-### Running the Coordinate Navigation Node
+Ensure the simulation is active using the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner).  
 
-Ensure that you have the [Coordinate Navigation Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/coordinate_navigation.py) ready. Once the simulation is running, open a second terminal and execute the [Coordinate Navigator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/XYCoordinateInput) node.
+#### Running the Coordinate Navigation Node
 
-You will be prompted to input **X** and **Y** coordinate values ranging from 0 to 11. Enter the desired values for your target location.  
+Have the [Coordinate Navigation Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/coordinate_navigation.py) ready. Run the [Coordinate Navigator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/XYCoordinateInput) in a second terminal.  
 
-For example, in this demonstration, `X = 10` and `Y = 10` were used.  
+Enter **X** and **Y** values between 0 and 11 to specify the target location. For example, `X = 10`, `Y = 10`.
 
-### Expected Outcome
+#### Expected Outcome
 
-The turtle will navigate to the specified coordinates in the simulation window. The expected result is shown below:
+The turtle navigates to the specified coordinates:
 
 ![Coordinate Navigation Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_Coordinate%20Navigation.png)
