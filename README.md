@@ -29,22 +29,26 @@ The message type is **`turtlesim/msg/Color`**, with an example output being: **r
 
 This ROS 2 package contains all nodes required for **Tasks 2 and 3** and is properly configured, with all node entry points defined in the [`Setup`](setup.py), allowing each node to be executed directly using `ros2 run`. The [`Setup`](setup.py) file specifies the package metadata and registers all executable nodes, so it is important to ensure that this file is correctly set up and the package is built before running the simulator or launching any nodes.
 
-## Task 2: Straight Line Node Demonstration
+# Task 2: Straight Line Node Demonstration
 
-First of all make sure you have the Straight Line Node file ready with all its program contents within [Straight Line Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py)
+This section demonstrates the execution and expected behavior of the **Straight Line Node** in the TurtleSim environment. Ensure that the node file is available and contains the complete implementation: [Straight Line Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py).
 
-### Simulation Setup
+## Simulation Setup
 
-Before running the node, make sure you have two terminals open, for the first one run the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner) to start and maintain the simulation environment.
+Before running the node, prepare two terminals:
 
-### Running the Straight Line Node
+1. **Simulation Runner:** In the first terminal, launch and maintain the TurtleSim simulation environment using the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner). This terminal must remain active throughout the node execution.
 
-With the simulation running, then open the second temrinal and start the  [Straight Line]([straight_line_node.py](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Straight%20Line%20Runner)) node.
+2. **Node Execution Terminal:** The second terminal will be used to run the Straight Line Node.
 
-### Expected Output
+## Running the Straight Line Node
 
-The turtle will move linearly across the simulation window. The expected result is shown below:
+With the simulation running, execute the [Straight Line Node Runner](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Straight%20Line%20Runner) in the second terminal. This node controls the turtle to move linearly across the simulation window.
+
+## Expected Output
+
+Upon successful execution, the turtle will traverse the simulation window in a straight line. The expected behavior is illustrated below:
 
 ![Straight Line Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/TurtleSim_StraightLine.png)
 
-> **Note:** Keep the simulation terminal active while the node is running.
+> **Note:** Ensure that the simulation terminal remains active while the Straight Line Node is running to maintain the simulation environment.
