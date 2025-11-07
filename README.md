@@ -59,7 +59,7 @@ Ensure the [`Figure '8' Node`](https://github.com/Twillur/PDE4430_TurtleSim_Proj
 
 Use the same simulation terminal as before to maintain the environment.
 
-### Running the [Figure 8](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%208%20Runner) in the second terminal
+### Running the [Figure 8 Demonstration](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%20'8'%20Runner) in the second terminal
 
 Start the [`Figure '8'`]([https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%208%20Runner](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Figure%20'8'%20Runner)) node in a new terminal.
 
