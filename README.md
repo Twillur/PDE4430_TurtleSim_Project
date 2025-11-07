@@ -137,3 +137,23 @@ Expected behavior for `linear = 1` and `angular = 1`:
 Expected behavior for `linear = 1` and `angular = 0`:
 
 ![TurtleSim 1 Linear 0 Angular](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Linear0Angular.png)
+
+## User Inputting X and Y Coordinates
+
+### Simulation Setup
+
+As in previous tasks, first ensure that the simulation environment is running. Open the first terminal and start the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner).
+
+### Running the Coordinate Navigation Node
+
+Ensure that you have the [Coordinate Navigation Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/coordinate_navigation.py) ready. Once the simulation is running, open a second terminal and execute the [Coordinate Navigator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/XYCoordinateInput) node.
+
+You will be prompted to input **X** and **Y** coordinate values ranging from 0 to 11. Enter the desired values for your target location.  
+
+For example, in this demonstration, `X = 10` and `Y = 10` were used.  
+
+### Expected Outcome
+
+The turtle will navigate to the specified coordinates in the simulation window. The expected result is shown below:
+
+![Coordinate Navigation Demonstration](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_Coordinate%20Navigation.png)
