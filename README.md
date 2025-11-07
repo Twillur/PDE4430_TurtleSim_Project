@@ -31,7 +31,7 @@ This ROS 2 package contains all nodes required for **Tasks 2 and 3** and is prop
 
 ## Task 2: Straight Line Node Demonstration
 
-This section demonstrates the **Straight Line** node, implemented in the [`Straight Line Node`]([straight_line_node.py](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py)).
+This section demonstrates the **Straight Line** node, implemented in the [Straight Line Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/straight_line_node.py)
 
 ### Simulation Setup
 
