@@ -91,7 +91,7 @@ The turtle will autonomously navigate the environment in a random cleaning patte
 
 ## 4 Roombas Node Demonstration
 
-Ensure the [`4 Roombas Node`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/four_roombas_node.py) file is available.
+Ensure the [4 Roombas Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/multi_turtle_node.py) file is available.
 
 ### Simulation Setup
 
