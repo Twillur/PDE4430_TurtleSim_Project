@@ -81,8 +81,7 @@ Continue using the running simulation terminal.
 
 ### Running the Roomba Node
 
-Execute the [`Roomba`](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Roomba%20Runner) node in a separate terminal.
-
+Execute the [Roomba](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Roomba%20Runner) node in a separate terminal.
 ### Expected Output
 
 The turtle will autonomously navigate the environment in a random cleaning pattern:
