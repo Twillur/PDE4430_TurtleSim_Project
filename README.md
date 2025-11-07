@@ -114,13 +114,15 @@ Four turtles will navigate the environment simultaneously, each following indepe
 
 ### Simulation Setup
 
-As with the previous tasks, first ensure that the simulation environment is running. Open the first terminal and start the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner).
+As in previous tasks, first ensure that the simulation environment is running. Open the first terminal and start the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner).
 
 ### Running the Drive User Input Node
 
-In the second terminal, run the [Drive User Input Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/drive_user_input.py). This node allows the user to control the turtle by inputting linear and angular velocity values.
+Once the simulation is running, open a second terminal and run the [Drive User Input Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/drive_user_input.py). This node allows the user to control the turtle’s motion by specifying linear and angular velocity values.
 
-When executed, the program will prompt you to enter a **linear speed** value. After pressing Enter, it will prompt for an **angular velocity** value. Once both values are entered, the turtle will move according to the specified inputs.
+After running the node, you will be prompted to input a **linear speed**. Enter a value and press Enter. Next, you will be prompted to input an **angular velocity**. Enter the value and press Enter. The turtle will then move in the simulation according to the provided inputs.
+
+To start the node execution, click or navigate to the [Drive User Input](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Linear%26Angular%20Input) link.
 
 ### Example Outputs
 
