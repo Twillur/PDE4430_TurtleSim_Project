@@ -129,11 +129,11 @@ Use the [Drive User Input Runner](https://github.com/Twillur/PDE4430_TurtleSim_P
 
 #### Example Outputs
 
-- **Linear = 1, Angular = 1**
+- **Linear Speed = 1, Angular = 1**
 
 ![TurtleSim 1 Linear 1 Angular](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Linear1Angular.png)
 
-- **Linear = 1, Angular = 0**
+- **Linear Speed = 1, Angular = 0**
 
 ![TurtleSim 1 Linear 0 Angular](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Linear0Angular.png)
 
