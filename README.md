@@ -107,3 +107,31 @@ Four turtles will navigate the environment simultaneously, each following indepe
 ![4 Roombas Demonstration](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/TurtleSim%20Simulation%20Visual/Turtlesim_4Roombas.png)
 > **Note:** Ensure the simulation terminal remains active to observe all turtles.
 
+
+# Task 3: User Input for Linear and Angular Values
+
+## User Inputting Linear and Angular Values
+
+### Simulation Setup
+
+As with the previous tasks, first ensure that the simulation environment is running. Open the first terminal and start the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner).
+
+### Running the Drive User Input Node
+
+In the second terminal, run the [Drive User Input Node](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/turtlesim_pde4430/drive_user_input.py). This node allows the user to control the turtle by inputting linear and angular velocity values.
+
+When executed, the program will prompt you to enter a **linear speed** value. After pressing Enter, it will prompt for an **angular velocity** value. Once both values are entered, the turtle will move according to the specified inputs.
+
+### Example Outputs
+
+#### Linear = 1, Angular = 1
+
+Expected behavior for `linear = 1` and `angular = 1`:
+
+![TurtleSim 1 Linear 1 Angular](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Linear1Angular.png)
+
+#### Linear = 1, Angular = 0
+
+Expected behavior for `linear = 1` and `angular = 0`:
+
+![TurtleSim 1 Linear 0 Angular](https://raw.githubusercontent.com/Twillur/PDE4430_TurtleSim_Project/main/TurtleSim%20Simulation%20Visual/Turtlesim_1Linear0Angular.png)
