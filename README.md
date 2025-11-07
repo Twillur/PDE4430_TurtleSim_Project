@@ -35,7 +35,7 @@ This section demonstrates the **Straight Line** node, implemented in the [Straig
 
 ### Simulation Setup
 
-Before running the node, ensure the TurtleSim simulation is active. Open a terminal and run the Simulator to start and maintain the simulation environment.
+Before running the node, ensure the TurtleSim simulation is active. Open a terminal and run the [Simulator](https://github.com/Twillur/PDE4430_TurtleSim_Project/blob/main/Simulation%20Runner) to start and maintain the simulation environment.
 
 ### Running the Straight Line Node
 
