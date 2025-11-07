@@ -28,3 +28,23 @@ The message type is **`turtlesim/msg/Color`**, with an example output being: **r
 # Package Configuration and `setup.py` Structure
 
 This ROS 2 package contains all nodes required for **Tasks 2 and 3** and is properly configured, with all node entry points defined in [`setup.py`](setup.py), allowing each node to be executed directly using `ros2 run`. The [`setup.py`](setup.py) file specifies the package metadata and registers all executable nodes, so it is important to ensure that this file is correctly set up and the package is built before running the simulator or launching any nodes.
+
+## Straight Line Node Demonstration
+
+This section demonstrates the **Straight Line** node, implemented in [`straight_line_node.py`](straight_line_node.py).
+
+### Simulation Setup
+
+Before running the node, ensure the TurtleSim simulation is active. Open a terminal (referred to as **Simulation Runner**) to start and maintain the simulation environment.
+
+### Running the Straight Line Node
+
+With the simulation running, execute the **Straight Line** node to move the turtle in a straight trajectory. The node is implemented in [`straight_line_node.py`](straight_line_node.py).
+
+### Expected Output
+
+The turtle will move linearly across the simulation window. The expected result is shown below:
+
+![Straight Line Turtle Movement](TurtleSim_StraightLine.png)
+
+> **Note:** Keep the simulation terminal active while the node is running.
